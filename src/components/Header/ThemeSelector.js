@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   }
 `;
 const Selector = styled.label`
-  background-color: white;
+  background-color: ${({ theme }) => theme.inverseBackgroundColor};
   border-radius: 50px;
   cursor: pointer;
   display: flex;
@@ -24,7 +24,7 @@ const Selector = styled.label`
   transform: scale(1.2);
 `;
 const Dot = styled.div`
-  background-color: #0d0d0d;
+  background-color: ${({ theme }) => theme.dotColor};
   border-radius: 50%;
   position: absolute;
   top: 2px;

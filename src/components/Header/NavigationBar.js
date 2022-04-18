@@ -4,11 +4,9 @@ import ThemeSelector from "./ThemeSelector";
 
 const Wrapper = styled.div`
   display: flex;
-  background-color: #1a1a1a;
+  background-color: ${({ theme }) => theme.backgroundColor};
   justify-content: space-around;
-  color: red;
   width: 100%;
-  color: white;
   font-size: 25px;
 `;
 const NavigationMain = styled.div`

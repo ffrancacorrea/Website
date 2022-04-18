@@ -3,7 +3,8 @@ import NavigationBar from "./NavigationBar";
 import styled from "@emotion/styled";
 
 const Wrapper = styled.div`
-  background-color: #1a1a1a;
+  color: ${({ theme }) => theme.color};
+  background-color: ${({ theme }) => theme.backgroundColor};
   width: 100%;
   height: 100vh;
 `;
