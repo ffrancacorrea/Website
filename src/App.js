@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={darkMode ? themes["dark"] : themes["light"]}>
-      <Header handleDarkMode={handleDarkMode} />
+      <Header handleDarkMode={handleDarkMode} darkMode={darkMode} />
     </ThemeProvider>
   );
 };

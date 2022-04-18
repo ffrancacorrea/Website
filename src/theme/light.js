@@ -1,6 +1,6 @@
 const lightTheme = {
   backgroundColor: "#FFF",
-  inverseBackgroundColor: "#1a1a1a",
+  inverseBackgroundColor: "#000",
   color: "#1a1a1a",
   dotColor: "#FFF",
 };

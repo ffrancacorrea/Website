@@ -45,10 +45,13 @@ const Logos = styled.div`
     margin-right: 30px;
   }
 `;
-const Header = ({ handleDarkMode }) => {
+const Header = ({ handleDarkMode, darkMode }) => {
   return (
     <Wrapper>
-      <NavigationBar handleDarkMode={handleDarkMode}></NavigationBar>
+      <NavigationBar
+        handleDarkMode={handleDarkMode}
+        darkMode={darkMode}
+      ></NavigationBar>
       <Container>
         <h1>Full Stack Developer</h1>
         <h2>Born in Santos,</h2>

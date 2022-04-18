@@ -1,5 +1,8 @@
 import styled from "@emotion/styled";
 
+import sun from "../../assets/icons/sun.gif";
+import moon from "../../assets/icons/moon.gif";
+
 const Wrapper = styled.div`
   input {
     opacity: 0;
@@ -21,9 +24,25 @@ const Selector = styled.label`
   height: 16px;
   width: 40px;
   transform: scale(1.2);
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  img:first-child {
+    width: 20px;
+    height: 20px;
+    display: ${({ darkMode }) => !darkMode && "none"};
+  }
+  img:last-child {
+    background-color: ${({ theme }) => theme.inverseBackgroundColor};
+    margin-left: 20px;
+    filter: invert(100%);
+    display: ${({ darkMode }) => darkMode && "none"};
+  }
 `;
 const Dot = styled.div`
   background-color: ${({ theme }) => theme.dotColor};
+  z-index: 1;
   border-radius: 50%;
   position: absolute;
   top: 2px;
@@ -34,7 +53,8 @@ const Dot = styled.div`
   transition: transform 0.2s linear;
 `;
 
-const ThemeSelector = ({ handleDarkMode }) => {
+const ThemeSelector = ({ handleDarkMode, darkMode }) => {
+  console.log(darkMode);
   return (
     <Wrapper>
       <input
@@ -42,9 +62,10 @@ const ThemeSelector = ({ handleDarkMode }) => {
         id="selector"
         onChange={(e) => handleDarkMode(e.target.checked)}
       />
-      <Selector className="label" for="selector">
-        {/* TODO: add icons**/}
+      <Selector className="label" for="selector" darkMode={darkMode}>
+        <img src={sun} alt="" />
         <Dot class="ball"></Dot>
+        <img src={moon} alt="" />
       </Selector>
     </Wrapper>
   );
