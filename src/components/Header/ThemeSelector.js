@@ -1,0 +1,51 @@
+import React from "react";
+import styled from "@emotion/styled";
+
+const Wrapper = styled.div`
+  input {
+    opacity: 0;
+    position: absolute;
+  }
+  input:checked + label div {
+    transform: translateX(24px);
+  }
+`;
+const Selector = styled.label`
+  background-color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 16px;
+  width: 40px;
+  transform: scale(1.2);
+`;
+const Dot = styled.div`
+  background-color: #0d0d0d;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+`;
+
+const ThemeSelector = () => {
+  //TODO add darkMode state
+  return (
+    <Wrapper>
+      <input type="checkbox" id="selector" />
+      <Selector className="label" for="selector">
+        {/* TODO: add icons**/}
+        <Dot class="ball"></Dot>
+      </Selector>
+    </Wrapper>
+  );
+};
+
+export default ThemeSelector;
