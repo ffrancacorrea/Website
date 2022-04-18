@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "@emotion/styled";
 
 const Wrapper = styled.div`
@@ -35,11 +34,14 @@ const Dot = styled.div`
   transition: transform 0.2s linear;
 `;
 
-const ThemeSelector = () => {
-  //TODO add darkMode state
+const ThemeSelector = ({ handleDarkMode }) => {
   return (
     <Wrapper>
-      <input type="checkbox" id="selector" />
+      <input
+        type="checkbox"
+        id="selector"
+        onChange={(e) => handleDarkMode(e.target.checked)}
+      />
       <Selector className="label" for="selector">
         {/* TODO: add icons**/}
         <Dot class="ball"></Dot>

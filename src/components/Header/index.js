@@ -27,7 +27,7 @@ const Container = styled.div`
   }
 `;
 const Logos = styled.div`
-  margin: 30px 0;
+  margin: 40px 0;
   img {
     animation-name: fade;
     animation-duration: 4s;
@@ -45,10 +45,10 @@ const Logos = styled.div`
     margin-right: 30px;
   }
 `;
-const Header = () => {
+const Header = ({ handleDarkMode }) => {
   return (
     <Wrapper>
-      <NavigationBar></NavigationBar>
+      <NavigationBar handleDarkMode={handleDarkMode}></NavigationBar>
       <Container>
         <h1>Full Stack Developer</h1>
         <h2>Born in Santos,</h2>

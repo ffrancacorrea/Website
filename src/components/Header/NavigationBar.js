@@ -31,7 +31,7 @@ const NavigationItem = styled.a`
   color: inherit;
 `;
 
-const NavigationBar = () => {
+const NavigationBar = ({ handleDarkMode }) => {
   return (
     <Wrapper>
       <NavigationMain>Fernanda</NavigationMain>
@@ -40,7 +40,7 @@ const NavigationBar = () => {
           <NavigationItem href="#About">About</NavigationItem>
           <NavigationItem href="#Projects">Projects</NavigationItem>
         </NavigationItems>
-        <ThemeSelector></ThemeSelector>
+        <ThemeSelector handleDarkMode={handleDarkMode}></ThemeSelector>
       </NavigationLinks>
     </Wrapper>
   );
