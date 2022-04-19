@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   }
 `;
 const Selector = styled.label`
-  background-color: ${({ theme }) => theme.inverseBackgroundColor};
+  background-color: ${({ theme }) => theme.themeSelectorBackgroundColor};
   border-radius: 50px;
   cursor: pointer;
   display: flex;
@@ -34,7 +34,6 @@ const Selector = styled.label`
     display: ${({ darkMode }) => !darkMode && "none"};
   }
   img:last-child {
-    background-color: ${({ theme }) => theme.inverseBackgroundColor};
     margin-left: 20px;
     filter: invert(100%);
     display: ${({ darkMode }) => darkMode && "none"};
