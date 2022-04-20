@@ -4,6 +4,7 @@ import { ThemeProvider } from "@emotion/react";
 import themes from "./theme/themes";
 import Header from "./components/Header";
 import About from "./components/About";
+import Projects from "./components/Projects";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -16,6 +17,7 @@ const App = () => {
     <ThemeProvider theme={darkMode ? themes["dark"] : themes["light"]}>
       <Header handleDarkMode={handleDarkMode} darkMode={darkMode} />
       <About />
+      <Projects />
     </ThemeProvider>
   );
 };

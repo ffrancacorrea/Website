@@ -13,6 +13,9 @@ const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.backgroundColor};
   width: 100%;
   height: 100vh;
+  h2:first-of-type {
+    color: ${({ theme }) => theme.secondaryColor};
+  }
 `;
 const Container = styled.div`
   display: flex;
@@ -53,9 +56,9 @@ const Header = ({ handleDarkMode, darkMode }) => {
         darkMode={darkMode}
       ></NavigationBar>
       <Container>
-        <h1>Full Stack Developer</h1>
-        <h2>Born in Santos,</h2>
-        <h2>located in Paris</h2>
+        <h1>Fernanda</h1>
+        <h2>Full Stack Developer</h2>
+        <h2>Born in Santos, located in Paris</h2>
         <Logos>
           <a href="mailto:ffrancacorrea@gmail.com">
             <img src={gmailLogo} alt="" />

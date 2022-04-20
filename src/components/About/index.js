@@ -15,11 +15,11 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 const Title = styled.h1`
-  //text-align: center;
   margin-left: 25%;
 `;
 const Content = styled.div`
   display: flex;
+  margin-bottom: 100px;
 `;
 const Presentation = styled.div`
   display: flex;
@@ -27,6 +27,9 @@ const Presentation = styled.div`
   flex: 1;
   margin: 5%;
   text-align: justify;
+  h2 {
+    color: ${({ theme }) => theme.secondaryColor};
+  }
 `;
 const Logos = styled.div`
   display: flex;
@@ -35,11 +38,16 @@ const Logos = styled.div`
   img {
     width: 50px;
     height: 50px;
-    //margin: 33px;
+    filter: grayscale(100%);
+  }
+  img:hover {
+    filter: none;
+    transform: scale(1.3);
+    transition: 0.5s;
   }
 `;
 const Line = styled.div`
-  border-left: ${({ theme }) => `6px solid ${theme.inverseBackgroundColor}`};
+  border-left: ${({ theme }) => `6px solid ${theme.secondaryColor}`};
   border-radius: 95% 45% 45% 95%;
   height: 500px;
   margin-top: 30px;
@@ -55,7 +63,7 @@ const Photo = styled.div`
 
 const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id="About">
       <Title>About me</Title>
       <Content>
         <Presentation>

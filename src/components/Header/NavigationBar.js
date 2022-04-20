@@ -28,7 +28,7 @@ const NavigationItem = styled.a`
   display: flex;
   margin: 0 30px;
   text-decoration: none;
-  color: inherit;
+  color: ${({ theme }) => theme.color};
 `;
 
 const NavigationBar = ({ handleDarkMode, darkMode }) => {
