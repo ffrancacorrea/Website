@@ -49,6 +49,7 @@ const Card = styled.div`
   p {
     text-align: center;
     padding-top: 10px;
+    color: white;
   }
 `;
 const Projects = () => {
