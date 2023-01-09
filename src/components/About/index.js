@@ -69,12 +69,7 @@ const About = () => {
         <Presentation>
           <h2>Hi, I'm Fernanda</h2>
           <h3>
-            and I'm a full stack developer Ea dolor occaecat consectetur commodo
-            nostrud veniam pariatur ad id. Ut eiusmod nulla ullamco nulla
-            deserunt nostrud magna. Sunt pariatur cillum officia qui voluptate
-            anim tempor et. Ex sint nostrud minim et et incididunt. Consequat
-            pariatur tempor et magna duis. Enim duis magna excepteur pariatur
-            amet ullamco anim laborum veniam sint anim ad ad pariatur.
+            and I'm a full stack developer. This website was created to showcase some of my skills and projects. You can see the technologies I most frequently use bellow.
           </h3>
           <Logos>
             <img src={html} alt="" />

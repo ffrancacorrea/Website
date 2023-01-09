@@ -57,11 +57,11 @@ const Projects = () => {
     <Wrapper id="Projects">
       <Title>Projects</Title>
       <Cards>
-        <Card width="500px" height="250px" image={project_1}></Card>
-        <Card width="600px" height="300px" image={project_2}>
+      <Card width="500px" height="250px" image={project_1} onClick={e =>  window.open('https://github.com/ffrancacorrea/house-design-gallery','_blank')}></Card>
+        <Card width="600px" height="300px" image={project_2} onClick={e =>  window.open('https://github.com/ffrancacorrea/country-cards','_blank')}>
           <p>IN PROGRESS</p>
         </Card>
-        <Card width="500px" height="250px" image={project_3}></Card>
+        <Card width="500px" height="250px" image={project_3} onClick={e =>  window.open('https://github.com/ffrancacorrea/movieApp','_blank')}></Card>
       </Cards>
     </Wrapper>
   );
