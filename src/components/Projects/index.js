@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   color: ${({ theme }) => theme.color};
   background-color: ${({ theme }) => theme.backgroundColor};
   width: 100%;
+  height: 90vh;
 `;
 const Title = styled.h1`
   text-align: right;
@@ -16,9 +17,8 @@ const Title = styled.h1`
 `;
 const Cards = styled.div`
   display: flex;
-  height: 100vh;
   position: relative;
-  margin: 5%;
+  margin-top: 5%;
   div:first-of-type {
     margin-left: 20%;
   }
@@ -57,11 +57,38 @@ const Projects = () => {
     <Wrapper id="Projects">
       <Title>Projects</Title>
       <Cards>
-      <Card width="500px" height="250px" image={project_1} onClick={e =>  window.open('https://github.com/ffrancacorrea/house-design-gallery','_blank')}></Card>
-        <Card width="600px" height="300px" image={project_2} onClick={e =>  window.open('https://github.com/ffrancacorrea/country-cards','_blank')}>
+        <Card
+          width="500px"
+          height="250px"
+          image={project_1}
+          onClick={(e) =>
+            window.open(
+              "https://github.com/ffrancacorrea/house-design-gallery",
+              "_blank"
+            )
+          }
+        ></Card>
+        <Card
+          width="600px"
+          height="300px"
+          image={project_2}
+          onClick={(e) =>
+            window.open(
+              "https://github.com/ffrancacorrea/country-cards",
+              "_blank"
+            )
+          }
+        >
           <p>IN PROGRESS</p>
         </Card>
-        <Card width="500px" height="250px" image={project_3} onClick={e =>  window.open('https://github.com/ffrancacorrea/movieApp','_blank')}></Card>
+        <Card
+          width="500px"
+          height="250px"
+          image={project_3}
+          onClick={(e) =>
+            window.open("https://github.com/ffrancacorrea/movieApp", "_blank")
+          }
+        ></Card>
       </Cards>
     </Wrapper>
   );
