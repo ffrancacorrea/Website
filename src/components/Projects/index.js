@@ -17,26 +17,27 @@ const Title = styled.h1`
 `;
 const Cards = styled.div`
   display: flex;
-  position: relative;
-  margin-top: 5%;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
   div:first-of-type {
-    margin-left: 20%;
+    margin-left: -10%;
   }
   div:nth-of-type(2) {
+    margin: -20px;
     margin-left: 40%;
-    margin-top: 300px;
   }
   div:nth-of-type(3) {
-    margin-left: 25%;
-    margin-top: 650px;
+    margin-left: -20%;
   }
 `;
 const Card = styled.div`
+  align-self: center;
+  box-shadow: 0px 0px 6px #000;
   background-image: ${({ image }) =>
     `linear-gradient(to bottom,  rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${image})`};
   background-size: cover;
   background-position: center;
-  position: absolute;
   color: ${({ theme }) => theme.color};
   background-color: ${({ theme }) => theme.cardBackgroundColor};
   width: ${({ width }) => width};
@@ -58,6 +59,17 @@ const Projects = () => {
       <Title>Projects</Title>
       <Cards>
         <Card
+          width="250px"
+          height="400px"
+          image={project_2}
+          onClick={(e) =>
+            window.open(
+              "https://github.com/ffrancacorrea/climbing-blog",
+              "_blank"
+            )
+          }
+        ></Card>
+        <Card
           width="500px"
           height="250px"
           image={project_1}
@@ -68,19 +80,6 @@ const Projects = () => {
             )
           }
         ></Card>
-        <Card
-          width="600px"
-          height="300px"
-          image={project_2}
-          onClick={(e) =>
-            window.open(
-              "https://github.com/ffrancacorrea/country-cards",
-              "_blank"
-            )
-          }
-        >
-          <p>IN PROGRESS</p>
-        </Card>
         <Card
           width="500px"
           height="250px"
