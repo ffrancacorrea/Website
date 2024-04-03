@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import project_1 from "../../assets/images/project-1.PNG"
 import project_2 from "../../assets/images/project-2.PNG"
-import project_3 from "../../assets/images/project-3.png"
+import project_3 from "../../assets/images/project-3.PNG"
 
 const Wrapper = styled.div`
   display: flex;
