@@ -101,7 +101,11 @@ const Header = ({ handleDarkMode, darkMode }) => {
             }}
             transition={{ duration: 0.8 }}
           >
-            <a href="https://github.com/ffrancacorrea" target="_blank">
+            <a
+              href="https://github.com/ffrancacorrea"
+              target="_blank"
+              rel="noopener"
+            >
               <img src={gitLogo} alt="" />
             </a>
           </motion.div>
@@ -113,7 +117,11 @@ const Header = ({ handleDarkMode, darkMode }) => {
             }}
             transition={{ duration: 1.2 }}
           >
-            <a href="https://linkedin.com/in/ffrancacorrea/" target="_blank">
+            <a
+              href="https://linkedin.com/in/ffrancacorrea/"
+              target="_blank"
+              rel="noopener"
+            >
               <img src={linkedinLogo} alt="" />
             </a>
           </motion.div>

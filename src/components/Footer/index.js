@@ -25,7 +25,11 @@ const Footer = () => {
       >
         <p>
           Made with ❤️ by{" "}
-          <a href="https://github.com/ffrancacorrea" target="_blank">
+          <a
+            href="https://github.com/ffrancacorrea"
+            target="_blank"
+            rel="noopener"
+          >
             ME
           </a>{" "}
           © 2024
