@@ -8,9 +8,12 @@ import Projects from "./components/Projects"
 import Footer from "./components/Footer"
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false)
+  const cachedDarkMode =
+    window.localStorage.getItem("cachedDarkMode") === "true"
+  const [darkMode, setDarkMode] = useState(cachedDarkMode)
 
   const handleDarkMode = (mode) => {
+    localStorage.setItem("cachedDarkMode", mode)
     setDarkMode(mode)
   }
 

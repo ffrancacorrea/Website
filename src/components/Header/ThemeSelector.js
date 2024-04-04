@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
+import styled from "@emotion/styled"
 
-import sun from "../../assets/icons/sun.gif";
-import moon from "../../assets/icons/moon.gif";
+import sun from "../../assets/icons/sun.gif"
+import moon from "../../assets/icons/moon.gif"
 
 const Wrapper = styled.div`
   input {
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   input:checked + label div {
     transform: translateX(24px);
   }
-`;
+`
 const Selector = styled.label`
   background-color: ${({ theme }) => theme.themeSelectorBackgroundColor};
   border-radius: 50px;
@@ -38,7 +38,7 @@ const Selector = styled.label`
     filter: invert(100%);
     display: ${({ darkMode }) => darkMode && "none"};
   }
-`;
+`
 const Dot = styled.div`
   background-color: ${({ theme }) => theme.dotColor};
   z-index: 1;
@@ -50,16 +50,16 @@ const Dot = styled.div`
   width: 22px;
   transform: translateX(0px);
   transition: transform 0.2s linear;
-`;
+`
 
 const ThemeSelector = ({ handleDarkMode, darkMode }) => {
-  console.log(darkMode);
   return (
     <Wrapper>
       <input
         type="checkbox"
         id="selector"
         onChange={(e) => handleDarkMode(e.target.checked)}
+        checked={darkMode}
       />
       <Selector className="label" for="selector" darkMode={darkMode}>
         <img src={sun} alt="" />
@@ -67,7 +67,7 @@ const ThemeSelector = ({ handleDarkMode, darkMode }) => {
         <img src={moon} alt="" />
       </Selector>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default ThemeSelector;
+export default ThemeSelector
