@@ -55,7 +55,6 @@ const Projects = () => {
       <motion.div
         initial={{ opacity: 0, transform: "translateY(100px)" }}
         whileInView={{ opacity: 1, transform: "translateY(0)" }}
-        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}
         style={{
           height: "100%",
