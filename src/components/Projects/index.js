@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   color: ${({ theme }) => theme.color};
   background-color: ${({ theme }) => theme.backgroundColor};
   width: 100%;
+  h3 {
+    text-align: right;
+    margin-right: 25%;
+  }
 `
 const Title = styled.h1`
   text-align: right;
@@ -34,6 +38,7 @@ const Card = styled.div`
   width: ${({ width }) => width};
   height: ${({ height }) => height};
   border-radius: 1%;
+  cursor: pointer;
   :hover {
     transform: scale(1.2);
     transition: 0.7s;
@@ -57,6 +62,10 @@ const Projects = () => {
         }}
       >
         <Title>Projects</Title>
+        <h3>
+          Here are some of the projects I made on my free time. I hope you’ll
+          enjoy them!
+        </h3>
         <Cards>
           <Card
             width="250px"
