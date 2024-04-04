@@ -1,4 +1,6 @@
 import styled from "@emotion/styled"
+import { motion } from "framer-motion"
+
 import project_1 from "../../assets/images/project-1.PNG"
 import project_2 from "../../assets/images/project-2.PNG"
 import project_3 from "../../assets/images/project-3.PNG"
@@ -9,7 +11,6 @@ const Wrapper = styled.div`
   color: ${({ theme }) => theme.color};
   background-color: ${({ theme }) => theme.backgroundColor};
   width: 100%;
-  //height: 90vh;
 `
 const Title = styled.h1`
   text-align: right;
@@ -46,45 +47,55 @@ const Card = styled.div`
 const Projects = () => {
   return (
     <Wrapper id="Projects">
-      <Title>Projects</Title>
-      <Cards>
-        <Card
-          width="250px"
-          height="400px"
-          image={project_2}
-          onClick={(e) =>
-            window.open(
-              "http://ffrancacorrea.github.io/climbing-blog",
-              "_blank"
-            )
-          }
-        ></Card>
+      <motion.div
+        initial={{ opacity: 0, transform: "translateY(100px)" }}
+        whileInView={{ opacity: 1, transform: "translateY(0)" }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5 }}
+        style={{
+          height: "100%",
+        }}
+      >
+        <Title>Projects</Title>
+        <Cards>
+          <Card
+            width="250px"
+            height="400px"
+            image={project_2}
+            onClick={(e) =>
+              window.open(
+                "http://ffrancacorrea.github.io/climbing-blog",
+                "_blank"
+              )
+            }
+          ></Card>
 
-        <Card
-          width="250px"
-          height="400px"
-          image={project_3}
-          onClick={(e) =>
-            window.open(
-              "https://ffrancacorrea.github.io/paris-travel/",
-              "_blank"
-            )
-          }
-        ></Card>
-      </Cards>
-      <Cards>
-        <Card
-          width="540px"
-          height="250px"
-          image={project_1}
-          onClick={(e) =>
-            window.open(
-              "https://github.com/ffrancacorrea/house-design-gallery",
-              "_blank"
-            )
-          }
-        ></Card>
-      </Cards>
+          <Card
+            width="250px"
+            height="400px"
+            image={project_3}
+            onClick={(e) =>
+              window.open(
+                "https://ffrancacorrea.github.io/paris-travel/",
+                "_blank"
+              )
+            }
+          ></Card>
+        </Cards>
+        <Cards>
+          <Card
+            width="540px"
+            height="250px"
+            image={project_1}
+            onClick={(e) =>
+              window.open(
+                "https://github.com/ffrancacorrea/house-design-gallery",
+                "_blank"
+              )
+            }
+          ></Card>
+        </Cards>
+      </motion.div>
     </Wrapper>
   )
 }

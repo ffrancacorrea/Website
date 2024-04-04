@@ -1,11 +1,13 @@
-import styled from "@emotion/styled";
-import profilePic from "../../assets/images/profile-pic.PNG";
-import html from "../../assets/logos/html.svg";
-import css from "../../assets/logos/css.svg";
-import js from "../../assets/logos/javascript.svg";
-import react from "../../assets/logos/react.svg";
-import python from "../../assets/logos/python.svg";
-import git from "../../assets/logos/git.svg";
+import styled from "@emotion/styled"
+import { motion } from "framer-motion"
+
+import profilePic from "../../assets/images/profile-pic.PNG"
+import html from "../../assets/logos/html.svg"
+import css from "../../assets/logos/css.svg"
+import js from "../../assets/logos/javascript.svg"
+import react from "../../assets/logos/react.svg"
+import python from "../../assets/logos/python.svg"
+import git from "../../assets/logos/git.svg"
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,14 +15,14 @@ const Wrapper = styled.div`
   color: ${({ theme }) => theme.color};
   background-color: ${({ theme }) => theme.backgroundColor};
   width: 100%;
-`;
+`
 const Title = styled.h1`
   margin-left: 25%;
-`;
+`
 const Content = styled.div`
   display: flex;
   margin-bottom: 100px;
-`;
+`
 const Presentation = styled.div`
   display: flex;
   flex-direction: column;
@@ -30,7 +32,11 @@ const Presentation = styled.div`
   h2 {
     color: ${({ theme }) => theme.secondaryColor};
   }
-`;
+  p {
+    text-align: right;
+    margin-top: -3%;
+  }
+`
 const Logos = styled.div`
   display: flex;
   justify-content: space-around;
@@ -45,13 +51,13 @@ const Logos = styled.div`
     transform: scale(1.3);
     transition: 0.5s;
   }
-`;
+`
 const Line = styled.div`
   border-left: ${({ theme }) => `6px solid ${theme.secondaryColor}`};
   border-radius: 95% 45% 45% 95%;
   height: 500px;
   margin-top: 30px;
-`;
+`
 const Photo = styled.div`
   display: flex;
   flex: 1;
@@ -59,34 +65,47 @@ const Photo = styled.div`
   img {
     clip-path: ellipse(59% 45% at 27% 54%);
   }
-`;
+`
 
 const About = () => {
   return (
     <Wrapper id="About">
-      <Title>About me</Title>
-      <Content>
-        <Presentation>
-          <h2>Hi, I'm Fernanda</h2>
-          <h3>
-            and I'm a full stack developer. This website was created to showcase some of my skills and projects. You can see the technologies I most frequently use bellow.
-          </h3>
-          <Logos>
-            <img src={html} alt="" />
-            <img src={css} alt="" />
-            <img src={js} alt="" />
-            <img src={react} alt="" />
-            <img src={python} alt="" />
-            <img src={git} alt="" />
-          </Logos>
-        </Presentation>
-        <Photo>
-          <Line></Line>
-          <img src={profilePic} alt="" />
-        </Photo>
-      </Content>
+      <motion.div
+        initial={{ opacity: 0, transform: "translateY(100px)" }}
+        whileInView={{ opacity: 1, transform: "translateY(0)" }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5 }}
+        style={{
+          height: "100%",
+        }}
+      >
+        <Title>About me</Title>
+        <Content>
+          <Presentation>
+            <h2>Hi, I'm Fernanda</h2>
+            <h3>
+              and I'm a full stack developer. This website was created to
+              showcase some of my skills and projects. You can see the
+              technologies I most frequently use bellow.
+            </h3>
+            <p>hover over them, it feels good 😉</p>
+            <Logos>
+              <img src={html} alt="" />
+              <img src={css} alt="" />
+              <img src={js} alt="" />
+              <img src={react} alt="" />
+              <img src={python} alt="" />
+              <img src={git} alt="" />
+            </Logos>
+          </Presentation>
+          <Photo>
+            <Line></Line>
+            <img src={profilePic} alt="" />
+          </Photo>
+        </Content>
+      </motion.div>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default About;
+export default About
