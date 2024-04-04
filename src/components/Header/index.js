@@ -104,7 +104,7 @@ const Header = ({ handleDarkMode, darkMode }) => {
             <a
               href="https://github.com/ffrancacorrea"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
             >
               <img src={gitLogo} alt="" />
             </a>
@@ -120,7 +120,7 @@ const Header = ({ handleDarkMode, darkMode }) => {
             <a
               href="https://linkedin.com/in/ffrancacorrea/"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
             >
               <img src={linkedinLogo} alt="" />
             </a>

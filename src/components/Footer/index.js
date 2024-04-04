@@ -28,7 +28,7 @@ const Footer = () => {
           <a
             href="https://github.com/ffrancacorrea"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             ME
           </a>{" "}
