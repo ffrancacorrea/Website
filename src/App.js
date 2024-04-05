@@ -34,7 +34,7 @@ const App = () => {
     <ThemeProvider theme={darkMode ? themes["dark"] : themes["light"]}>
       <GlobalStyle />
       <Header handleDarkMode={handleDarkMode} darkMode={darkMode} />
-      <About />
+      <About darkMode={darkMode} />
       <Projects />
       <Footer />
     </ThemeProvider>

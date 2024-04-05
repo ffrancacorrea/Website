@@ -8,6 +8,12 @@ import js from "../../assets/logos/javascript.svg"
 import react from "../../assets/logos/react.svg"
 import python from "../../assets/logos/python.svg"
 import git from "../../assets/logos/git.svg"
+import mongodb from "../../assets/logos/mongodb.svg"
+import postgresql from "../../assets/logos/postgresql.svg"
+import docker from "../../assets/logos/docker.svg"
+import typescript from "../../assets/logos/typescript.svg"
+import vscode from "../../assets/logos/vscode.svg"
+import flask from "../../assets/logos/flask.svg"
 
 const Wrapper = styled.div`
   display: flex;
@@ -66,14 +72,23 @@ const Photo = styled.div`
     clip-path: ellipse(59% 45% at 27% 54%);
   }
 `
-
-const About = () => {
+const Logo = ({ src, isBlack, darkMode }) => {
+  return (
+    <img
+      src={src}
+      alt=""
+      style={{
+        filter: isBlack && darkMode && "invert(1)",
+      }}
+    />
+  )
+}
+const About = ({ darkMode }) => {
   return (
     <Wrapper id="About">
       <motion.div
         initial={{ opacity: 0, transform: "translateY(100px)" }}
         whileInView={{ opacity: 1, transform: "translateY(0)" }}
-        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}
         style={{
           height: "100%",
@@ -90,12 +105,20 @@ const About = () => {
             </h3>
             <p>hover over them, it feels good 😉</p>
             <Logos>
-              <img src={html} alt="" />
-              <img src={css} alt="" />
-              <img src={js} alt="" />
-              <img src={react} alt="" />
-              <img src={python} alt="" />
-              <img src={git} alt="" />
+              <Logo src={html} alt="" darkMode={darkMode} />
+              <Logo src={css} alt="" darkMode={darkMode} />
+              <Logo src={js} alt="" darkMode={darkMode} />
+              <Logo src={react} alt="" darkMode={darkMode} />
+              <Logo src={python} alt="" darkMode={darkMode} />
+              <Logo src={flask} alt="" darkMode={darkMode} isBlack={true} />
+            </Logos>
+            <Logos>
+              <Logo src={mongodb} alt="" darkMode={darkMode} />
+              <Logo src={typescript} alt="" darkMode={darkMode} />
+              <Logo src={postgresql} alt="" darkMode={darkMode} />
+              <Logo src={git} alt="" darkMode={darkMode} />
+              <Logo src={docker} alt="" darkMode={darkMode} />
+              <Logo src={vscode} alt="" darkMode={darkMode} />
             </Logos>
           </Presentation>
           <Photo>

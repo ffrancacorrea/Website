@@ -3,6 +3,9 @@ import styled from "@emotion/styled"
 import { motion } from "framer-motion"
 import ThemeSelector from "./ThemeSelector"
 
+import codeBlack from "../../assets/logos/code-black.png"
+import codeOrange from "../../assets/logos/code-orange.png"
+
 const Wrapper = styled.div`
   display: flex;
   background-color: ${({ theme }) => theme.backgroundColor};
@@ -10,11 +13,14 @@ const Wrapper = styled.div`
   width: 100%;
   font-size: 25px;
 `
-const NavigationMain = styled.div`
-  margin: 25px;
+const NavigationIcon = styled.div`
   margin-left: 5%;
   flex: 1;
-  margin: 30px;
+  margin: 25px;
+  img {
+    width: 40px;
+    height: 40px;
+  }
 `
 const NavigationLinks = styled.div`
   display: flex;
@@ -30,7 +36,8 @@ const NavigationItem = styled.a`
   display: flex;
   margin: 0 30px;
   text-decoration: none;
-  color: ${({ theme }) => theme.color};
+  color: ${({ theme }) =>
+    theme.backgroundColor !== "#FFF" ? theme.color : theme.secondaryColor};
 `
 
 const NavigationBar = ({ handleDarkMode, darkMode }) => {
@@ -44,7 +51,9 @@ const NavigationBar = ({ handleDarkMode, darkMode }) => {
         }}
         transition={{ duration: 1 }}
       >
-        <NavigationMain>Fernanda</NavigationMain>
+        <NavigationIcon>
+          <img src={darkMode ? codeOrange : codeBlack} alt=""></img>
+        </NavigationIcon>
       </motion.div>
 
       <motion.div
