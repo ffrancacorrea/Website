@@ -14,6 +14,10 @@ const Wrapper = styled.div`
   h3 {
     text-align: right;
     margin-right: 25%;
+    @media (max-width: 1024px) {
+      text-align: justify;
+      margin: 20px;
+    }
   }
 `
 const Title = styled.h1`
@@ -39,9 +43,11 @@ const Card = styled.div`
   height: ${({ height }) => height};
   border-radius: 1%;
   cursor: pointer;
-  :hover {
-    transform: scale(1.2);
-    transition: 0.7s;
+  @media (min-width: 1024px) {
+    :hover {
+      transform: scale(1.2);
+      transition: 0.7s;
+    }
   }
   p {
     text-align: center;
