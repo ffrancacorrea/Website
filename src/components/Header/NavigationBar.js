@@ -21,6 +21,9 @@ const NavigationIcon = styled.div`
     width: 40px;
     height: 40px;
   }
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 const NavigationLinks = styled.div`
   display: flex;
@@ -31,6 +34,9 @@ const NavigationLinks = styled.div`
 const NavigationItems = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 const NavigationItem = styled.a`
   display: flex;

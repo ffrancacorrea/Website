@@ -28,6 +28,9 @@ const Title = styled.h1`
 const Content = styled.div`
   display: flex;
   margin-bottom: 100px;
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 `
 const Presentation = styled.div`
   display: flex;
@@ -61,7 +64,6 @@ const Logos = styled.div`
 const Line = styled.div`
   border-left: ${({ theme }) => `6px solid ${theme.secondaryColor}`};
   border-radius: 95% 45% 45% 95%;
-  height: 500px;
   margin-top: 30px;
 `
 const Photo = styled.div`
@@ -70,6 +72,9 @@ const Photo = styled.div`
   justify-content: center;
   img {
     clip-path: ellipse(59% 45% at 27% 54%);
+  }
+  @media (max-width: 1024px) {
+    display: none;
   }
 `
 const Logo = ({ src, isBlack, darkMode }) => {
