@@ -54,9 +54,13 @@ const Logos = styled.div`
   justify-content: space-around;
   margin-top: 50px;
   img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     filter: grayscale(100%);
+    @media (max-width: 1024px) {
+      width: 50px;
+      height: 50px;
+    }
   }
   img:hover {
     filter: none;
