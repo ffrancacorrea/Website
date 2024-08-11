@@ -25,7 +25,10 @@ const Container = styled.div`
   text-align: center;
   height: 100%;
   font-style: italic;
-  font-size: 30px;
+  font-size: 50px;
+  @media (max-width: 1024px) {
+    font-size: 30px;
+  }
   h2 {
     margin: 5px;
   }

@@ -43,7 +43,10 @@ const Presentation = styled.div`
   }
   p {
     text-align: right;
-    margin-top: -3%;
+    margin-top: -2%;
+    @media (max-width: 1024px) {
+      display: none;
+    }
   }
 `
 const Logos = styled.div`
