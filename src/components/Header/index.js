@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   color: ${({ theme }) => theme.color};
   background-color: ${({ theme }) => theme.backgroundColor};
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   h2:first-of-type {
     color: ${({ theme }) => theme.secondaryColor};
   }
