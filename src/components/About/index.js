@@ -117,20 +117,20 @@ const About = ({ darkMode }) => {
             </h3>
             <p>hover over them, it feels good 😉</p>
             <Logos>
-              <Logo src={html} alt="" darkMode={darkMode} />
-              <Logo src={css} alt="" darkMode={darkMode} />
-              <Logo src={js} alt="" darkMode={darkMode} />
-              <Logo src={react} alt="" darkMode={darkMode} />
-              <Logo src={python} alt="" darkMode={darkMode} />
+              <Logo src={html} alt="" />
+              <Logo src={css} alt="" />
+              <Logo src={js} alt="" />
+              <Logo src={react} alt="" />
+              <Logo src={python} alt="" />
               <Logo src={flask} alt="" darkMode={darkMode} isBlack={true} />
             </Logos>
             <Logos>
-              <Logo src={mongodb} alt="" darkMode={darkMode} />
-              <Logo src={typescript} alt="" darkMode={darkMode} />
-              <Logo src={postgresql} alt="" darkMode={darkMode} />
-              <Logo src={git} alt="" darkMode={darkMode} />
-              <Logo src={docker} alt="" darkMode={darkMode} />
-              <Logo src={vscode} alt="" darkMode={darkMode} />
+              <Logo src={mongodb} alt="" />
+              <Logo src={typescript} alt="" />
+              <Logo src={postgresql} alt="" />
+              <Logo src={git} alt="" />
+              <Logo src={docker} alt="" />
+              <Logo src={vscode} alt="" />
             </Logos>
           </Presentation>
           <Photo>

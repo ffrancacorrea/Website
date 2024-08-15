@@ -2,6 +2,7 @@ import React from "react"
 import NavigationBar from "./NavigationBar"
 import styled from "@emotion/styled"
 import { motion } from "framer-motion"
+import { ReactTyped } from "react-typed"
 
 import gitLogo from "../../assets/logos/git-logo.png"
 import gmailLogo from "../../assets/logos/gmail-logo.png"
@@ -16,6 +17,13 @@ const Wrapper = styled.div`
   height: 110vh;
   h2:first-of-type {
     color: ${({ theme }) => theme.secondaryColor};
+  }
+  h2:last-of-type {
+    font-size: 120%;
+  }
+  @media (max-width: 1024px) {
+    height: 100vh;
+    font-size: 30px;
   }
 `
 const Container = styled.div`
@@ -44,6 +52,10 @@ const Logos = styled.div`
     height: 80px;
     border-radius: 50%;
     box-shadow: 0.3rem 0.5rem 0.4rem rgba(0, 0, 0, 0.3);
+    @media (max-width: 1024px) {
+      width: 60px;
+      height: 60px;
+    }
   }
   img:hover {
     transform: rotate(-20deg) scale(1.2);
@@ -80,7 +92,16 @@ const Header = ({ handleDarkMode, darkMode }) => {
           }}
           transition={{ duration: 1 }}
         >
-          <h2>Full Stack Developer</h2>
+          <h2>
+            <ReactTyped
+              strings={["Software Developer"]}
+              typeSpeed={100}
+              loop
+              backSpeed={20}
+              cursorChar=">"
+              showCursor={true}
+            />
+          </h2>
           <h2>Born in Santos, located in Paris</h2>
         </motion.div>
         <Logos>
