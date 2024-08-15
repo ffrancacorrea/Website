@@ -56,14 +56,12 @@ const Logos = styled.div`
   img {
     width: 70px;
     height: 70px;
-    filter: grayscale(100%);
     @media (max-width: 1024px) {
       width: 50px;
       height: 50px;
     }
   }
   img:hover {
-    filter: none;
     transform: scale(1.3);
     transition: 0.5s;
   }
@@ -115,22 +113,166 @@ const About = ({ darkMode }) => {
               showcase some of my skills and projects. You can see the
               technologies I most frequently use bellow.
             </h3>
-            <p>hover over them, it feels good 😉</p>
+            <p>you can hover over them if you feel like it 😉</p>
             <Logos>
-              <Logo src={html} alt="" />
-              <Logo src={css} alt="" />
-              <Logo src={js} alt="" />
-              <Logo src={react} alt="" />
-              <Logo src={python} alt="" />
-              <Logo src={flask} alt="" darkMode={darkMode} isBlack={true} />
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <Logo src={html} alt="" />
+              </motion.div>
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 0.5 }}
+              >
+                <Logo src={css} alt="" />
+              </motion.div>
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 0.7 }}
+              >
+                <Logo src={js} alt="" />
+              </motion.div>
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 0.9 }}
+              >
+                <Logo src={react} alt="" />
+              </motion.div>
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 1.1 }}
+              >
+                <Logo src={python} alt="" />
+              </motion.div>
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 1.3 }}
+              >
+                <Logo src={flask} alt="" darkMode={darkMode} isBlack={true} />
+              </motion.div>
             </Logos>
             <Logos>
-              <Logo src={mongodb} alt="" />
-              <Logo src={typescript} alt="" />
-              <Logo src={postgresql} alt="" />
-              <Logo src={git} alt="" />
-              <Logo src={docker} alt="" />
-              <Logo src={vscode} alt="" />
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 0.4 }}
+              >
+                <Logo src={mongodb} alt="" />
+              </motion.div>
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 0.6 }}
+              >
+                <Logo src={typescript} alt="" />
+              </motion.div>
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 0.8 }}
+              >
+                <Logo src={postgresql} alt="" />
+              </motion.div>
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 1.0 }}
+              >
+                <Logo src={git} alt="" />
+              </motion.div>
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 1.2 }}
+              >
+                <Logo src={docker} alt="" />
+              </motion.div>
+              <motion.div
+                initial={{
+                  filter: "grayscale(100%)",
+                  transform: "translate(-20px, 40px)",
+                }}
+                whileInView={{
+                  filter: "grayscale(20%)",
+                  transform: "translate(0)",
+                }}
+                transition={{ duration: 1.4 }}
+              >
+                <Logo src={vscode} alt="" />
+              </motion.div>
             </Logos>
           </Presentation>
           <Photo>
